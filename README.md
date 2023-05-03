@@ -1,18 +1,41 @@
 # Blender Threejs Import and Export
+Three.js and Blender are both popular, open source 3d graphics tools. When converting from a scene in Three.js to Blender it is sometimes desirable to specify the camera's properties using the json format.
 
 ## Usage
+This add-on for Blender is allows for importing Three.js cameras and progrommatically importing Graphics Language Transport Format (glTF) scenes that originated in a Three.js environment. It lays the groundwork for importing other json specified elements, and exporting to json.
 
-### User Interface
+- Import supports cameras and glTF scenes.
+- Export is not currently supported.
+
+### From the Blender User Interface
 ``` 
 File > Import > Three.js (.json)
 ```
 
-## Dependencies
-- Install Blender 3.3 or a compatible version
-- Install Python 3.10.6 or compatible version
+### From a Blender Python Script
+In a blender environment
+``` python
+import threejs_io
+from threejs_io import import_threejs
+
+import_threejs.import_objects("/path/to/threejsConfig.json")
+```
+
+### Json Format Specification
+The json file consists of a single list of objects that closely resemble Three.js objects with a few extensions. You can see examples in the `examples` folder.
+
+``` json
+[{"isScene": true
+  "scene": {"filepath": "/path/to/scene.gltf"}
+ {"isCamera": true
+  "background": {"filepath": "/path/to/reference/backgroundImage.png"}}}]
+```
 
 ## Installation
 
+### Dependencies
+- Install Blender 3.3 or a compatible version
+- Install Python 3.10.6 or compatible version
 ### Archive the threejs_io Folder (.zip)
 #### Generic Archival
 Zip the `threejs_io` folder using your operating system's zip utility.
