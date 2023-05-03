@@ -2,7 +2,7 @@
 Three.js and Blender are both popular, open source 3d graphics tools. When converting from a scene in Three.js to Blender it is sometimes desirable to specify the camera's properties using the json format.
 
 ## Usage
-This add-on for Blender is allows for importing Three.js cameras and progrommatically importing Graphics Language Transport Format (glTF) scenes that originated in a Three.js environment. It lays the groundwork for importing other json specified elements, and exporting to json.
+This add-on for Blender allows for importing Three.js cameras and progrommatically importing Graphics Language Transport Format (glTF) scenes that originated in a Three.js environment. It lays the groundwork for importing other json specified elements, and exporting to json.
 
 - Import supports cameras and glTF scenes.
 - Export is not currently supported.
